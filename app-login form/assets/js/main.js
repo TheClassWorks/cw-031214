@@ -16,6 +16,7 @@ function usernamevalidation(event) {
     err_msg.style.fontSize = "12px";
     err_msg.innerHTML = "نام کاربری مجاز نیست";
     username.setAttribute("class", "w-75 err_box");
+    
     if (event.code == "Backspace") {
       usernamevalidation();
     }
@@ -47,4 +48,7 @@ function showpass() {
 //------------------------------- onblur ------------------
 password.addEventListener("blur", function () {
   console.log("خارج شدی");
+});
+username.addEventListener("focus", function () {
+  console.log("وارد یوزنیم شدی");
 });
